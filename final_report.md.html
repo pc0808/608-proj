@@ -64,7 +64,7 @@ When an image is posted there is also an optional filter parameter you can pass 
 State diagram
 ===============================================================================
 
-![Full State Diagram](https://608dev-2.net/sandbox/sc/team78/diagram.png)
+![Full State Diagram](state_diagram.png)
 
 State 0: Idle
 -------------------------------------------------------------------------------
@@ -137,7 +137,7 @@ Enables the user to manually edit the image they clicked at either state 12 or 1
     - The user can reload the page so to go back to state 12/13 (the one transitioned from)
     - The user can submit the edited image as a new version edit so transitions to state 1
 
-![Example of the type of edits you can make](https://608dev-2.net/sandbox/sc/team78/edit.jpeg | width=50%)
+![Example of the type of edits you can make](edits.png | width=50%)
 
 State 15: GET
 -------------------------------------------------------------------------------
@@ -158,7 +158,7 @@ Image HTML display
 -------------------------------------------------------------------------------
 The original time lapse feature was meant to be an interactive feature where on the ESP32, certain original images are marked as part of a time lapse and replayed accordingly on the server after post submission. However, this was an idea proposed for week 4, so we took heed of our time constraint and decided on a simpler time lapse feature, where an image looped through all its corresponding version edits.  
 
-![An example of the server gallery iterating through all images' edit history ](https://i.imgur.com/P3eyaLJ.gif)
+![An example of the server gallery ](https://i.imgur.com/P3eyaLJ.gif)
 
 Additionally, displaying base64 encoded strings from the IMU and the server was a major debugging concern. The issue was with how we were trying to display the image in HTML, not the bas64 string itself. The source attribute of the images was not being set correctly.
 
